@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">SprinklerConfig</string>
+    <string name="zone_name">Zone name</string>
+    <string name="dtmf">Zone DTMF</string>
+    <string name="days">Days of the week</string>
+    <string name="zones">Zones to water</string>
+
+    <string name="add_zone">Add zone</string>
+
+    <string name="add_program">Add program</string>
+    <string name="program_name">Program name</string>
+    <string name="monday">M</string>
+    <string name="tuesday">Tu</string>
+    <string name="wednesday">W</string>
+    <string name="thursday">Th</string>
+    <string name="friday">F</string>
+    <string name="saturday">Sa</string>
+    <string name="sunday">S</string>
+    <string name="zone_delay">Delay  between  zones  (sec):</string>
+    <string name="interval"  >Interval between runs (days):</string>
+
+
+
+</resources>

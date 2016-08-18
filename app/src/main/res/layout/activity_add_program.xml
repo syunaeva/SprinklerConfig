@@ -1,0 +1,147 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                tools:context=".activities.AddProgramActivity">
+
+    <EditText
+        android:id="@+id/txt_progrm_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:hint="@string/program_name"
+        android:inputType="text"
+        android:textAppearance="?android:attr/textAppearance"
+        android:textColor="@android:color/black" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="M"
+        android:id="@+id/checkbox_monday"
+        android:layout_below="@+id/txt_progrm_name"
+        android:textAppearance="?android:attr/textAppearance"
+        android:textColor="@android:color/black" />
+
+    <CheckBox
+        android:id="@+id/checkbox_tuesday"
+        android:layout_toRightOf="@+id/checkbox_monday"
+        android:layout_below="@+id/txt_progrm_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tuesday"
+        android:textAppearance="?android:attr/textAppearance"
+        android:textColor="@android:color/black" />
+
+    <CheckBox
+        android:id="@+id/checkbox_wednesday"
+        android:layout_toRightOf="@id/checkbox_tuesday"
+        android:layout_below="@+id/txt_progrm_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wednesday"
+        android:textAppearance="?android:attr/textAppearance"
+        android:textColor="@android:color/black" />
+
+    <CheckBox
+        android:id="@+id/checkbox_thursday"
+        android:layout_toRightOf="@id/checkbox_wednesday"
+        android:layout_below="@+id/txt_progrm_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/thursday"
+        android:textAppearance="?android:attr/textAppearance"
+        android:textColor="@android:color/black" />
+
+    <CheckBox
+        android:id="@+id/checkbox_friday"
+        android:layout_toRightOf="@id/checkbox_thursday"
+        android:layout_below="@+id/txt_progrm_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/friday"
+        android:textAppearance="?android:attr/textAppearance"
+        android:textColor="@android:color/black" />
+
+    <CheckBox
+        android:id="@+id/checkbox_saturday"
+        android:layout_toRightOf="@id/checkbox_friday"
+        android:layout_below="@+id/txt_progrm_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/saturday"
+        android:textAppearance="?android:attr/textAppearance"
+        android:textColor="@android:color/black" />
+
+    <CheckBox
+        android:id="@+id/checkbox_sunday"
+        android:layout_toRightOf="@id/checkbox_saturday"
+        android:layout_below="@+id/txt_progrm_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sunday"
+        android:textAppearance="?android:attr/textAppearance"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/txt_dayinterval_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkbox_monday"
+        android:text="@string/interval"
+        android:textAppearance="?android:attr/textAppearance"
+        android:textColor="@android:color/black"/>
+
+    <EditText
+        android:id="@+id/txt_dayinterval"
+        android:layout_toRightOf="@+id/txt_dayinterval_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkbox_monday"
+        android:textAppearance="?android:attr/textAppearance"
+        android:textColor="@android:color/black"
+        android:inputType="numberDecimal"/>
+
+    <TextView
+        android:id="@+id/txt_zonedelay_desc"
+        android:layout_below="@+id/txt_dayinterval"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zone_delay"
+        android:textAppearance="?android:attr/textAppearance"
+        android:textColor="@android:color/black"/>
+
+    <EditText
+        android:id="@+id/txt_zonedelay"
+        android:layout_toRightOf="@+id/txt_zonedelay_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_dayinterval"
+        android:textAppearance="?android:attr/textAppearance"
+        android:textColor="@android:color/black"
+        android:inputType="numberDecimal"/>
+
+
+    <TimePicker
+        android:id="@+id/time_picker"
+        android:layout_below="@+id/txt_zonedelay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_below="@+id/time_picker"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:paddingBottom="2dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="2dp"
+        android:text="@string/add_program"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>
