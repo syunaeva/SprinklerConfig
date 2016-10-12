@@ -57,4 +57,10 @@ public class Program
             cal.set( Calendar.SECOND, 0 );
             return cal;
         }
+
+        @Override
+        public String toString(){
+            return name + " Starts: " + startHour + "."  + startMinute + " Zones: " + zones;
+        }
+
     }

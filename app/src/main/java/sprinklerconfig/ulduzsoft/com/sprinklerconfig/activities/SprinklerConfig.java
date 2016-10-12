@@ -2,7 +2,6 @@ package sprinklerconfig.ulduzsoft.com.sprinklerconfig.activities;
 
 import android.app.ListActivity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -12,26 +11,27 @@ import java.util.List;
 import java.util.Random;
 
 import sprinklerconfig.ulduzsoft.com.sprinklerconfig.R;
+import sprinklerconfig.ulduzsoft.com.sprinklerconfig.dao.ProgramDAO;
 import sprinklerconfig.ulduzsoft.com.sprinklerconfig.dao.ZonesDAO;
 import sprinklerconfig.ulduzsoft.com.sprinklerconfig.model.Program;
 import sprinklerconfig.ulduzsoft.com.sprinklerconfig.model.Zone;
 
 public class SprinklerConfig extends ListActivity {
-    private ZonesDAO dataSource;
+    private ProgramDAO dataSource;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sprinkler_config);
 
-        dataSource = new ZonesDAO(this);
+        dataSource = new ProgramDAO(this);
         dataSource.open();
 
-        List<Zone> values = dataSource.getAllZones();
+        List<Program> values = dataSource.getAllPrograms();
 
         // use the simpleCusrsor adapter to show
         // the elements in a list view
-        ArrayAdapter<Zone> adapter = new ArrayAdapter<Zone>(this, android.R.layout.simple_list_item_1, values);
+        ArrayAdapter<Program> adapter = new ArrayAdapter<Program>(this, android.R.layout.simple_list_item_1, values);
         setListAdapter(adapter);
 
     }
